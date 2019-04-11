@@ -2,7 +2,7 @@
 # Instance Methods
 
 ## Introduction
-Now that you know what classes and instances are, you can start to talk about instance methods. Instance methods are almost the same as regular functions in python. The key difference is that an instance method is defined inside of a class and bound to intance objects of that class. Instance methods can be thought of an attribute of an instance object. The difference bethween an instance method and another attribute of an instance, is that instance methods are `callable`, meaning they execute a block of code. This may seem a bit confusing, but try to think about instance methods as functions defined in a class that are really just attributes of an instance object from that class.
+Now that you know what classes and instances are, you can start to talk about instance methods. Instance methods are almost the same as regular functions in python. The key difference is that an instance method is defined inside of a class and bound to instance objects of that class. Instance methods can be thought of an attribute of an instance object. The difference between an instance method and another attribute of an instance, is that instance methods are `callable`, meaning they execute a block of code. This may seem a bit confusing, but try to think about instance methods as functions defined in a class that are really just attributes of an instance object from that class.
 
 ## Objectives
 
@@ -14,7 +14,7 @@ You will be able to:
 
 ## Instance Methods as Attributes
 
-When you think of methods and functions, you think about what kind of action they perform. The same goes for instance methods, however, the action being performed is scoped directly to that instance object. Remember, classes are kind of like the blue prints for its instance objects. So, let's take the example of a **Dog** class. What are things that all dogs do? They can bark, beg to go for a walk, chase squirrels, etc. So, you consider these more or less attributes of a dog -- the same as their name, breed, weight, age etc. When you create a new dog instance object, the dog should be able to automatically bark, beg, and chase squirrels.
+When you think of methods and functions, you think about what kind of action they perform. The same goes for instance methods, however, the action being performed is scoped directly to that instance object. Remember, classes are kind of like the blueprints for their instance objects. So, let's take the example of a **Dog** class. What are the things that all dogs do? They can bark, beg to go for a walk, chase squirrels, etc. So, you consider these more or fewer attributes of a dog -- the same as their name, breed, weight, age etc. When you create a new dog instance object, the dog should be able to automatically bark, beg, and chase squirrels.
 
 Let's see how you would create a single dog, `rex`, and get him to bark:
 
@@ -95,7 +95,7 @@ new_rex.bark()
 
 Uh oh! `TypeError: bark() takes 0 positional arguments but 1 was given`. This error is telling you that the method, `bark` was defined to take 0 arguments, but when you executed it, you gave it an argument. 
 
-Remember that one of the key differences between functions and methods is that a method is bound to an object and **implicitly** passes the object as a argumet. That is what is causing this error. Effectively, what is happening when you try to call the instance method is this:
+Remember that one of the key differences between functions and methods is that a method is bound to an object and **implicitly** passes the object as an argument. That is what is causing this error. Effectively, what is happening when you try to call the instance method is this:
 
 ```python
 # the instance object, new_rex, is implicitly passed in as the first argument upon execution
@@ -104,7 +104,7 @@ new_rex.bark(new_rex)
 
 So, how do you fix this error? Well, if instance methods will always require a default argument of the instance object, you will need to define our instance methods with an *explicit* first parameter.
 
->**Note:** Parameters are the variable names you give to our method or function's future data. They are called parameters when you talk about the defining of a method or function, but once you have the data they are arguments. 
+>**Note:** Parameters are the variable names you give to our method or function's future data. They are called parameters when you talk about the definition of a method or function, but once you have the data they are arguments. 
 
 ```python
 def function_example(parameter1, parameter2):
@@ -115,7 +115,7 @@ function_example("Argument1", "Argument2")
 # here the strings passed in, "Argument1" and "Argument2", are arguments since you are executing the function
 ```
 
-Okay, so let's see if when you define our function with a parameter, you can get get rid of the error. You'll also define another function `who_am_i` to help further understand what's happening here.
+Okay, so let's see if when you define our function with a parameter, you can get rid of the error. You'll also define another function `who_am_i` to help further understand what's happening here.
 
 ## Introducing `self`
 
@@ -155,8 +155,8 @@ print("4.", newest_rex == newest_rex.who_am_i())
 # again asserting that `self` is equal to the instance object on which who_am_i was called
 ```
 
-Again, don't worry if `self` still seems a bit confusing. It will become clearer through practice and it will also be very useful as you get further into object oriented programming. For now, you can just go forward with the knowledge that **to define an instance method and later call it on an instance object, you will need to include at least one parameter in the method definition**.
+Again, don't worry if `self` still seems a bit confusing. It will become clearer through practice and it will also be very useful as you get further into object-oriented programming. For now, you can just go forward with the knowledge that **to define an instance method and later call it on an instance object, you will need to include at least one parameter in the method definition**.
 
 ## Summary
 
-In this lab, you introduced a lot. You looked at instance methods and adding functions as attributes of objects. Then you looked at the differences between functions and instance methods. You learned that instance methods are bound to objects and they always use the object on which they are called as their first argument. Since instance methods use their object as an argument you looked at how to properly define an instance method by introducting the conept of `self` in object oriented programming. 
+In this lab, you introduced a lot. You looked at instance methods and adding functions as attributes of objects. Then you looked at the differences between functions and instance methods. You learned that instance methods are bound to objects and they always use the object on which they are called as their first argument. Since instance methods use their object as an argument you looked at how to properly define an instance method by introducing the concept of `self` in object-oriented programming.
