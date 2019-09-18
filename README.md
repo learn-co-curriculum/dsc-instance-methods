@@ -2,7 +2,7 @@
 # Instance Methods
 
 ## Introduction
-Now that you know what classes and instances are, you can start to talk about instance methods. Instance methods are almost the same as regular functions in python. The key difference is that an instance method is defined inside of a class and bound to instance objects of that class. Instance methods can be thought of an attribute of an instance object. The difference between an instance method and another attribute of an instance, is that instance methods are `callable`, meaning they execute a block of code. This may seem a bit confusing, but try to think about instance methods as functions defined in a class that are really just attributes of an instance object from that class.
+Now that you know what classes and instances are, you can start to talk about instance methods. Instance methods are almost the same as regular functions in python. The key difference is that an instance method is defined inside of a class and bound to instance objects of that class. Instance methods can be thought of as an attribute of an instance object. The difference between an instance method and another attribute of an instance is that instance methods are `callable`, meaning they execute a block of code. This may seem a bit confusing, but try to think about instance methods as functions defined in a class that are really just attributes of an instance object from that class.
 
 ## Objectives
 
@@ -14,7 +14,7 @@ You will be able to:
 
 ## Instance Methods as Attributes
 
-When you think of methods and functions, you think about what kind of action they perform. The same goes for instance methods, however, the action being performed is scoped directly to that instance object. Remember, classes are kind of like the blueprints for their instance objects. So, let's take the example of a **Dog** class. What are the things that all dogs do? They can bark, beg to go for a walk, chase squirrels, etc. So, you consider these more or fewer attributes of a dog -- the same as their name, breed, weight, age etc. When you create a new dog instance object, the dog should be able to automatically bark, beg, and chase squirrels.
+When you think of methods and functions, you think about what kind of action they perform. The same goes for instance methods, however, the action being performed is scoped directly to that instance object. Remember, classes are kind of like the blueprints for their instance objects. So, let's take the example of a **Dog** class. What are the things that all dogs do? They can bark, beg to go for a walk, chase squirrels, etc. So, you consider these more or fewer attributes of a dog -- the same as their name, breed, weight, age, etc. When you create a new dog instance object, the dog should be able to automatically bark, beg, and chase squirrels.
 
 Let's see how you would create a single dog, `rex`, and get him to bark:
 
@@ -44,7 +44,7 @@ rex.bark = make_a_bark
 rex.bark
 ```
 
-Here you can see that you successfully added a the `bark` attribute to `rex` and assigned it the function `make_a_bark`. Note that the return value of `rex.bark` is simply a function signature since you have not yet executed the function, and although this looks like an instance method it is not quite.
+Here you can see that you successfully added the `bark` attribute to `rex` and assigned it the function `make_a_bark`. Note that the return value of `rex.bark` is simply a function signature since you have not yet executed the function, and although this looks like an instance method it is not quite.
 
 > **Note:** Although you may hear and see the terms method and function used interchangeably, there are slight differences. You know that function is essentially an object that contains a block of code and it can optionally take in data or objects as explicit parameters, operate on them, and optionally return a value. A method is, simply put, a function that is bound to a class or instances of that class. Instance methods, thus, are functions that are available/bound to instance objects of the class in which they are defined. However, a key difference between the two is that a method is *implicitly* passed to the object on which it is called, meaning the first parameter for the method is the object. Don't worry if this is confusing as you will dive more into this later.
 
