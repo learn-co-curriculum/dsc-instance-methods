@@ -232,7 +232,7 @@ print("4.", newest_rex == newest_rex.who_am_i())
     4. True
 
 
-Again, don't worry if `self` still seems a bit confusing. It will become clearer through practice and it will also be very useful as you get further into object-oriented programming. For now, you can just go forward with the knowledge that **to define an instance method and later call it on an instance object, you will need to include at least one parameter in the method definition**.
+Again, don't worry if `self` still seems a bit confusing. It will become clearer through practice. For now, you can just go forward with the knowledge that **to define an instance method and later call it on an instance object, you will need to include at least one parameter in the method definition**.
 
 ## Summary
 
