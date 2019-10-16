@@ -11,7 +11,7 @@ You will be able to:
 * Compare instance methods and attributes
 * Define and call an instance method
 * Define instance attributes
-* Explain the self variable and its relation to instance objects
+* Explain the `self` variable and its relation to instance objects
 * Create an instance of a class
 
 ## Instance Methods as Attributes
@@ -204,7 +204,7 @@ newest_rex.bark()
 
 Awesome! It works. Again, since instance methods implicitly pass in the object itself as an argument during execution, you need to define our method with at least 1 parameter. 
 
-Notice that the parameter is named `self`. As with any function or method, you can name the parameters however you want, but the convention in Python is to name this first parameter `self`, which makes sense since it is the object on which you are calling the method. If that sounds confusing, don't worry. The concept of self is a little confusing. Let's play around with it and see if you can get a better idea.
+Notice that the parameter is named `self`. As with any function or method, you can name the parameters however you want, but the convention in Python is to name this first parameter `self`, which makes sense since it is the object on which you are calling the method. If that sounds confusing, don't worry. The concept of `self` is a little confusing. Let's play around with it and see if you can get a better idea.
 
 Let's first see what the return of the who_am_i method is:
 
@@ -236,4 +236,4 @@ Again, don't worry if `self` still seems a bit confusing. It will become clearer
 
 ## Summary
 
-In this lab, you were introduced to a lot. You looked at instance methods and adding functions as attributes of objects. Then you looked at the differences between functions and instance methods. You learned that instance methods are bound to objects and they always use the object on which they are called as their first argument. Since instance methods use their object as an argument you looked at how to properly define an instance method by introducing the concept of `self` in object-oriented programming.
+In this lab, you were introduced to a lot. You looked at instance methods and added functions as attributes of objects. Then you looked at the differences between functions and instance methods. You learned that instance methods are bound to objects and they always use the object on which they are called as their first argument. Since instance methods use their object as an argument you looked at how to properly define an instance method by introducing the concept of `self` in object-oriented programming.
