@@ -23,7 +23,7 @@ Let's see how you would create a single dog, `rex`, and get him to bark. First d
 
 
 ```python
-class Dog():
+class Dog:
     pass 
 ```
 
@@ -38,7 +38,7 @@ rex
 
 
 
-    <__main__.Dog at 0x111588be0>
+    <__main__.Dog at 0x111a83be0>
 
 
 
@@ -120,7 +120,7 @@ Alright, so, how do you turn this into a real instance method? Well, the first t
 
 
 ```python
-class Dog():
+class Dog:
     
     def bark():
         return "I'm an instance method! Oh and... ruff ruff!"
@@ -136,7 +136,7 @@ new_rex.bark
 
 
 
-    <bound method Dog.bark of <__main__.Dog object at 0x1115bcf98>>
+    <bound method Dog.bark of <__main__.Dog object at 0x111ab8f98>>
 
 
 
@@ -196,7 +196,7 @@ As with any function or method, you can name the parameters however you want, bu
 
 
 ```python
-class Dog():
+class Dog:
     
     def bark(self):
         return 'I am actually going to bark this time. bark!'
@@ -216,7 +216,7 @@ Awesome! It works. Again, since instance methods implicitly pass in the object i
 
 
 ```python
-class Dog():
+class Dog:
     
     def bark(self):
         return 'I am actually going to bark this time. bark!'
@@ -234,8 +234,8 @@ print("1.", fido.who_am_i()) # Check return value of method
 print("2.", fido) # Comparing return of the fido instance object 
 ```
 
-    1. <__main__.Dog object at 0x11166bef0>
-    2. <__main__.Dog object at 0x11166bef0>
+    1. <__main__.Dog object at 0x111b69ef0>
+    2. <__main__.Dog object at 0x111b69ef0>
 
 
 As you can see our `who_am_i()` method is returning the same instance object as `fido`, which makes sense because we called this method **on** fido, and if you look at the method all it does is return the first argument (`self`), which is the instance object on which the method was called. 
