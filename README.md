@@ -1,4 +1,3 @@
-
 # Instance Methods
 
 ## Introduction
@@ -38,7 +37,7 @@ rex
 
 
 
-    <__main__.Dog at 0x111a83be0>
+    <__main__.Dog at 0x7f7f904fed90>
 
 
 
@@ -114,6 +113,29 @@ make_a_bark()
 
 
 
+if we were to create a new dog with the `Dog` class, and call `.bark()` on it, we will get an error `'Dog' object has no attribute 'bark'`
+
+
+
+
+```python
+fluffy = Dog()
+fluffy.bark()
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AttributeError                            Traceback (most recent call last)
+
+    <ipython-input-7-5c4611a9a591> in <module>
+          1 fluffy = Dog()
+    ----> 2 fluffy.bark()
+    
+
+    AttributeError: 'Dog' object has no attribute 'bark'
+
+
 Alright, so, how do you turn this into a real instance method? Well, the first thing you need to do is define it inside of our class. So, let's take a look at how you can do that. 
 
 ## Define an instance method
@@ -136,7 +158,7 @@ new_rex.bark
 
 
 
-    <bound method Dog.bark of <__main__.Dog object at 0x111ab8f98>>
+    <bound method Dog.bark of <__main__.Dog object at 0x7f7f70659a00>>
 
 
 
@@ -157,7 +179,7 @@ new_rex.bark()
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-9-6e1d350549b7> in <module>
+    <ipython-input-10-6e1d350549b7> in <module>
           1 new_rex = Dog()
     ----> 2 new_rex.bark()
     
@@ -176,7 +198,7 @@ new_rex.bark(new_rex)
 
 So, how do you fix this error? Well, if instance methods will always require a default argument of the instance object, you will need to define the instance methods with an *explicit* first parameter.
 
->**Note:** Parameters are the variable names you give to the method or function's future data. They are called parameters when you talk about the definition of a method or function, but when you pass the data, they are referred as arguments. 
+>**Note:** Parameters are the variable names you give to the method or function's future data. They are called parameters when you talk about the definition of a method or function, but when you pass the data, they are referred to as arguments. 
 
 ```python
 # Since you are defining the function, the variables, parameter1 and parameter2, are called parameters
@@ -234,8 +256,8 @@ print("1.", fido.who_am_i()) # Check return value of method
 print("2.", fido) # Comparing return of the fido instance object 
 ```
 
-    1. <__main__.Dog object at 0x111b69ef0>
-    2. <__main__.Dog object at 0x111b69ef0>
+    1. <__main__.Dog object at 0x7f7f70659dc0>
+    2. <__main__.Dog object at 0x7f7f70659dc0>
 
 
 As you can see our `who_am_i()` method is returning the same instance object as `fido`, which makes sense because we called this method **on** fido, and if you look at the method all it does is return the first argument (`self`), which is the instance object on which the method was called. 
